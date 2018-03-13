@@ -1,5 +1,6 @@
 package com.github.bernd.dropreact;
 
+import com.github.bernd.dropreact.resources.SystemInfo;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -24,7 +25,7 @@ public class DropReactApplication extends Application<DropReactConfiguration> {
     @Override
     public void run(final DropReactConfiguration configuration,
                     final Environment environment) {
-        // TODO: implement application
+        environment.jersey().register(new SystemInfo());
     }
 
 }
