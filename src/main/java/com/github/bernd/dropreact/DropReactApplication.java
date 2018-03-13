@@ -1,6 +1,7 @@
 package com.github.bernd.dropreact;
 
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -17,7 +18,7 @@ public class DropReactApplication extends Application<DropReactConfiguration> {
 
     @Override
     public void initialize(final Bootstrap<DropReactConfiguration> bootstrap) {
-        // TODO: application initialization
+        bootstrap.addBundle(new AssetsBundle("/web/assets/", "/", "index.html"));
     }
 
     @Override
