@@ -47,6 +47,12 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/web/build</directory>
+                <targetPath>web/assets</targetPath>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>com.github.eirslett</groupId>
